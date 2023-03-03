@@ -5,7 +5,10 @@ let score = 20;
 let highscore = 0;
 
 let message = document.querySelector(".message");
-console.log(message);
+
+function displayMessage(message) {
+  document.querySelector(".message").textContent = message;
+}
 
 document.querySelector(".score").textContent = score;
 
@@ -32,7 +35,7 @@ function check() {
   if (!guess) {
     document.querySelector(".message").textContent = "Please input a guess!";
   } else if (guess === number) {
-    document.querySelector(".message").textContent = "Correct guess!";
+    displayMessage("Correct!!");
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "25rem";
     document.querySelector(".number").textContent = number;

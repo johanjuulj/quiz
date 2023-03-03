@@ -1,5 +1,7 @@
 "use strict";
 
+const number = Math.random();
+
 let message = document.querySelector(".message");
 console.log(message);
 
@@ -16,7 +18,8 @@ function check() {
   if (!guess) {
     document.querySelector(".message").textContent = "Please input a guess!";
   }
-  if (guess === 22) {
+  console.log(number);
+  if (guess === number) {
     document.querySelector(".message").textContent = "Correct guess!";
   }
 }

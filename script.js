@@ -33,7 +33,7 @@ function check() {
     alert("Hallo! You lost please start over and try again!");
   }
   if (!guess) {
-    document.querySelector(".message").textContent = "Please input a guess!";
+    displayMessage("Please input a guess!");
   } else if (guess === number) {
     displayMessage("Correct!!");
     document.querySelector("body").style.backgroundColor = "#60b347";
@@ -44,17 +44,15 @@ function check() {
       document.querySelector(".highscore").textContent = highscore;
     }
   } else if (guess > number) {
-    document.querySelector(".message").textContent = "Your guess is to high!";
-
+    displayMessage("Your guess is too high!");
     score--;
   } else if (guess < number) {
-    document.querySelector(".message").textContent = "Your guess is to low!";
+    displayMessage("Your guess is too low!");
     score--;
   }
   document.querySelector(".score").textContent = score;
   if (score === 0) {
-    document.querySelector(".message").textContent =
-      "You lost, please try again!";
+    displayMessage("You lost! Try again");
   }
 }
 

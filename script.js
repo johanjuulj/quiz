@@ -1,13 +1,23 @@
 "use strict";
 class Item {
-  constructor(name, price) {
+  constructor(name, blurp, img, postalcode, price) {
     this.name = name;
+    this.blurp = blurp;
     this.price = price;
+    this.img = img;
+    this.postalcode = postalcode;
   }
 }
 
 const itemList = [
-  new Item("the egg", 6200),
+  new Item(
+    "Pølsevogn, Ukendt Ukendt, lastevne (kg): 250",
+    "Rigtig fin Salgsvogn, til sommer sæsonen, der medfølger det inventar der er på billederne. Vognen er indregisteret og registrerings attest medfølger ",
+
+    "pøsevogn.png",
+    "8350",
+    39.9
+  ),
   new Item("slightly used toothbrush", 1),
   new Item("lightly petted rabbit", 25),
   new Item("row boat", 250),

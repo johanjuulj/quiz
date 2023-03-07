@@ -1,11 +1,13 @@
 "use strict";
 class Item {
-  constructor(name, blurp, img, postalcode, price) {
+  constructor(name, blurp, img, postalcode, url, price) {
     this.name = name;
     this.blurp = blurp;
-    this.price = price;
+
     this.img = img;
+    this.img = url;
     this.postalcode = postalcode;
+    this.price = price;
   }
 }
 
@@ -16,11 +18,27 @@ const itemList = [
 
     "pøsevogn.png",
     "8350",
-    39.9
+    "https://www.dba.dk/poelsevogn-ukendt-ukendt/id-1099471743/",
+    39900
   ),
-  new Item("slightly used toothbrush", 1),
-  new Item("lightly petted rabbit", 25),
-  new Item("row boat", 250),
+  new Item(
+    "Lego Star Wars, Kylo Ren",
+    "Kilo Ren, Legofigur Figuren er ny og ubrugt",
+
+    "legomand.png",
+    "3320",
+    "https://www.dba.dk/lego-star-wars-kylo-ren-k/id-1022089098/",
+    199
+  ),
+  new Item(
+    "Bleer, Rema 1000",
+    "2 uåbnet pakker bleer samt 30 løse bleer. Fra røgfrit hjem. ",
+
+    "bleer.png",
+    "2640",
+    "https://www.dba.dk/bleer-rema-1000-2-uaabnet/id-1099625345/",
+    120
+  ),
 ];
 
 let number = Math.trunc(Math.random() * itemList.length);

@@ -64,11 +64,15 @@ h1 {
 
 .itemBox {
   background: #eee;
+  background-image: url("img/bleer.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
   position: relative;
   color: #333;
   font-size: 6rem;
   width: 60%;
-  height: 30rem;
+  height: 80%;
   padding: 3rem 0rem;
   text-align: center;
   
@@ -78,17 +82,22 @@ h1 {
 }
 
 .topItemBox{
-  height:50%;
+  height:70%;
   
 }
 .bottomItemBox{
-  height:50%;
+  height:30%;
   
 }
  .bottomItemBoxBtn{
   width:25%;
   height: 100%;
   
+ }
+ .itemImg{
+
+  width: auto;
+  height: 100%;
  }
 
 .between {

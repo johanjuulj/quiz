@@ -1,7 +1,7 @@
 "use strict";
 
 let number = Math.trunc(Math.random() * 20) + 1;
-let score = 20;
+let score = 0;
 let highscore = 0;
 
 let message = document.querySelector(".message");

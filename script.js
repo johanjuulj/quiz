@@ -1,8 +1,27 @@
 "use strict";
+class Item {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+}
 
-let number = Math.trunc(Math.random() * 20) + 1;
-let score = 0;
+const itemList = [
+  new Item("the egg", 6200),
+  new Item("slightly used toothbrush", 1),
+  new Item("lightly petted rabbit", 25),
+  new Item("row boat", 250),
+];
+
+let number = Math.trunc(Math.random() * itemList.length);
+let item = itemList[number];
+console.log(item);
+let score = 20;
 let highscore = 0;
+
+//for (let i = 0; i < houseList.length; i++) {
+//  console.log(houseList[i]);
+//}
 
 let message = document.querySelector(".message");
 
@@ -16,12 +35,15 @@ document.querySelector(".check").addEventListener("click", check);
 document.querySelector(".again").addEventListener("click", again);
 
 function again() {
-  number = Math.trunc(Math.random() * 20) + 1;
+  number = Math.trunc(Math.random() * itemList.length);
+  console.log(number);
+  item = itemList[number];
+  console.log(item);
   score = 20;
   document.querySelector(".score").textContent = score;
   document.querySelector("body").style.backgroundColor = "#222";
-  document.querySelector(".number").style.width = "15rem";
-  document.querySelector(".number").textContent = "?";
+  //document.querySelector(".itemHidden").style.width = "15rem";
+  document.querySelector(".itemHidden").textContent = item.name;
 
   console.log("again");
 }
@@ -34,7 +56,7 @@ function check() {
   }
   if (!guess) {
     displayMessage("Please input a guess!");
-  } else if (guess === number) {
+  } else if (guess === item.price) {
     displayMessage("Correct!!");
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "25rem";
@@ -43,10 +65,10 @@ function check() {
       highscore = score;
       document.querySelector(".highscore").textContent = highscore;
     }
-  } else if (guess > number) {
+  } else if (guess > item.price) {
     displayMessage("Your guess is too high!");
     score--;
-  } else if (guess < number) {
+  } else if (guess < item.price) {
     displayMessage("Your guess is too low!");
     score--;
   }

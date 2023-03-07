@@ -44,13 +44,10 @@ function again() {
   document.querySelector("body").style.backgroundColor = "#222";
   //document.querySelector(".itemHidden").style.width = "15rem";
   document.querySelector(".itemHidden").textContent = item.name;
-
-  console.log("again");
 }
 function check() {
   let guess = Number(document.querySelector(".guess").value);
 
-  console.log("clicked");
   if (score === 0) {
     alert("Hallo! You lost please start over and try again!");
   }
@@ -59,8 +56,9 @@ function check() {
   } else if (guess === item.price) {
     displayMessage("Correct!!");
     document.querySelector("body").style.backgroundColor = "#60b347";
-    document.querySelector(".number").style.width = "25rem";
-    document.querySelector(".number").textContent = number;
+    //document.querySelector(".number").style.width = "100rem";
+    // sets guess box to the guess number if correct
+    //document.querySelector(".number").textContent = number;
     if (score > highscore) {
       highscore = score;
       document.querySelector(".highscore").textContent = highscore;

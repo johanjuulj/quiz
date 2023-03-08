@@ -71,7 +71,6 @@ function again() {
     ".itemBox"
   ).style.backgroundImage = `url("img/${item.img}")`;
 
-  console.log(item.img);
   console.log(`url("img/${item.img}")`);
 
   score = 20;

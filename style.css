@@ -82,16 +82,31 @@ h1 {
 }
 
 .topItemBox{
-  height:70%;
+  height:15%;
+  font-size: 4rem;
   
 }
 .bottomItemBox{
-  height:30%;
+  height:85%;
   
 }
- .bottomItemBoxBtn{
-  width:25%;
+.bottomItemBoxLeft{
+  width: 33%;
   height: 100%;
+  float:left;
+
+}
+.bottomItemBoxRight{
+ 
+  float: bottom;
+  float:right;
+  width: 33%;
+  height: 100%;
+  
+}
+ .itemBoxBtn{
+  width:80%;
+  height: 30%;
   
  }
  .itemImg{

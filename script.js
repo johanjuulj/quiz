@@ -5,8 +5,9 @@ class Item {
     this.blurp = blurp;
 
     this.img = img;
-    this.img = url;
+
     this.postalcode = postalcode;
+    this.url = url;
     this.price = price;
   }
 }
@@ -15,8 +16,7 @@ const itemList = [
   new Item(
     "Pølsevogn, Ukendt Ukendt, lastevne (kg): 250",
     "Rigtig fin Salgsvogn, til sommer sæsonen, der medfølger det inventar der er på billederne. Vognen er indregisteret og registrerings attest medfølger ",
-
-    "pøsevogn.png",
+    "pølsevogn.png",
     "8350",
     "https://www.dba.dk/poelsevogn-ukendt-ukendt/id-1099471743/",
     39900
@@ -43,7 +43,7 @@ const itemList = [
 
 let number = Math.trunc(Math.random() * itemList.length);
 let item = itemList[number];
-console.log(item);
+
 let score = 20;
 let highscore = 0;
 
@@ -64,12 +64,19 @@ document.querySelector(".again").addEventListener("click", again);
 
 function again() {
   number = Math.trunc(Math.random() * itemList.length);
-  console.log(number);
+
   item = itemList[number];
-  console.log(item);
+  document.querySelector(".topItemBox").textContent = item.name;
+  document.querySelector(
+    ".itemBox"
+  ).style.backgroundImage = `url("img/${item.img}")`;
+
+  console.log(item.img);
+  console.log(`url("img/${item.img}")`);
+
   score = 20;
   document.querySelector(".score").textContent = score;
-  document.querySelector("body").style.backgroundColor = "#222";
+  //document.querySelector("body").style.backgroundColor = "#222";
   //document.querySelector(".itemHidden").style.width = "15rem";
   document.querySelector(".itemHidden").textContent = item.name;
 }

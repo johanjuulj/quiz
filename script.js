@@ -66,12 +66,11 @@ function again() {
   number = Math.trunc(Math.random() * itemList.length);
 
   item = itemList[number];
-  document.querySelector(".topItemBox").textContent = item.name;
+  document.querySelector(".productName").textContent = item.name;
+  document.querySelector(".blurp").textContent = item.blurp;
   document.querySelector(
     ".itemBox"
   ).style.backgroundImage = `url("img/${item.img}")`;
-
-  console.log(`url("img/${item.img}")`);
 
   score = 20;
   document.querySelector(".score").textContent = score;

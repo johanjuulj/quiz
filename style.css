@@ -21,18 +21,18 @@ body {
 /* LAYOUT */
 header {
   position: relative;
-  height: 20vh;
+  height: 14vh;
   
 }
 
 .infoBox {
   position: relative;
-  height: 60vh;
+  height: 66vh;
   
 }
 
 main {
-  height: 20vh;
+  height: 18vh;
   color: #eee;
   display: flex;
   align-items: center;
@@ -67,11 +67,12 @@ h1 {
   background-image: url("img/bleer.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
-  background-position: center;
+  background-position: right;
   position: relative;
-  color: #333;
+  color: black;
   font-size: 6rem;
-  width: 60%;
+  
+  width: 50%;
   height: 80%;
   padding: 3rem 0rem;
   text-align: center;
@@ -85,6 +86,21 @@ h1 {
   height:15%;
   font-size: 4rem;
   
+}
+
+.productName{
+
+}
+.productDescription{
+  float: left;
+  text-align: left;
+}
+
+.productDescription p{
+  font-size: 50%;
+}
+.productDescription h5{
+  font-size: 60%;
 }
 .bottomItemBox{
   height:85%;

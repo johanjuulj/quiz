@@ -46,30 +46,36 @@ let item = itemList[number];
 
 let score = 20;
 let highscore = 0;
-
-//for (let i = 0; i < houseList.length; i++) {
-//  console.log(houseList[i]);
-//}
-
 let message = document.querySelector(".message");
 
 function displayMessage(message) {
   document.querySelector(".message").textContent = message;
 }
-
+//setting the score
 document.querySelector(".score").textContent = score;
+//set product name
+document.querySelector(".productName").textContent = item.name;
+//set blurp content
+document.querySelector(".blurp").textContent = item.blurp;
+//set image
+document.querySelector(
+  ".imageBox"
+).style.backgroundImage = `url("img/${item.img}")`;
 
-document.querySelector(".check").addEventListener("click", check);
-document.querySelector(".again").addEventListener("click", again);
+document.querySelector(".btn-check").addEventListener("click", check);
+document.querySelector(".btn-again").addEventListener("click", again);
 
 function again() {
   number = Math.trunc(Math.random() * itemList.length);
 
   item = itemList[number];
+  //set product name
   document.querySelector(".productName").textContent = item.name;
+  //set blurp content
   document.querySelector(".blurp").textContent = item.blurp;
+  //set image
   document.querySelector(
-    ".itemBox"
+    ".imageBox"
   ).style.backgroundImage = `url("img/${item.img}")`;
 
   score = 20;
